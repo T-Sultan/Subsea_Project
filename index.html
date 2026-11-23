@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Process Engineering Hub — interactive engineering calculations, process monitoring, automation and AI demonstration projects.">
+  <meta name="theme-color" content="#071522">
+  <title>Process Engineering Hub | Engineering • Data • Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Process Engineering Hub home">
+      <span class="brand-mark"><i class="fa-solid fa-industry"></i></span>
+      <span><b>PROCESS<span class="brand-accent">HUB</span></b><small>ENGINEERING INTELLIGENCE</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Overview</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#workbench">Workbench</a>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+    <div class="top-actions">
+      <span class="live-pill"><span></span> DEMO SYSTEM ONLINE</span>
+      <button class="icon-btn mobile-menu" id="menuToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <a class="top-cta" href="#workbench">Launch workbench <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> PROCESS ENGINEERING • DATA • AI</div>
+        <h1>Turn complex processes<br>into <span class="gradient-text">clear decisions.</span></h1>
+        <p class="hero-lead">An interactive engineering workspace bringing process calculations, plant monitoring, control concepts and AI demonstrations into one professional platform.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explore the projects <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn btn-ghost" href="#workbench"><i class="fa-solid fa-flask"></i> Open workbench</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span><i class="fa-solid fa-gauge-high"></i></span><span><i class="fa-solid fa-wave-square"></i></span><span><i class="fa-solid fa-brain"></i></span></div>
+          <p><b>10 integrated modules</b><small>One engineering portfolio experience</small></p>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="visual-grid"></div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="core-card">
+          <div class="core-top"><span><i class="fa-solid fa-microchip"></i> PROCESS INTELLIGENCE</span><span class="tiny-live">● LIVE DEMO</span></div>
+          <div class="core-icon"><i class="fa-solid fa-industry"></i></div>
+          <div class="core-title">Plant overview</div>
+          <div class="core-sub">SIMULATED PROCESS ENVIRONMENT</div>
+          <div class="core-metrics">
+            <div><small>Pressure</small><b id="heroPressure">12.4 <em>bar</em></b><span class="metric-good"><i class="fa-solid fa-arrow-trend-up"></i> Stable</span></div>
+            <div><small>Temperature</small><b id="heroTemp">68.2 <em>°C</em></b><span class="metric-good"><i class="fa-solid fa-check"></i> Normal</span></div>
+            <div><small>Flow rate</small><b id="heroFlow">54.8 <em>m³/h</em></b><span class="metric-good"><i class="fa-solid fa-wave-square"></i> Online</span></div>
+          </div>
+          <div class="signal-row"><span>PROCESS SIGNAL</span><div class="signal-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><b>98.6%</b></div>
+        </div>
+        <div class="float-chip chip-top"><i class="fa-solid fa-shield-halved"></i><span>Operational<br><b>visibility</b></span></div>
+        <div class="float-chip chip-bottom"><i class="fa-solid fa-brain"></i><span>AI-assisted<br><b>insights</b></span></div>
+      </div>
+    </section>
+
+    <section class="stats-strip section-shell reveal">
+      <div class="stat"><span class="stat-icon"><i class="fa-solid fa-cubes"></i></span><div><b>10</b><small>Engineering modules</small></div></div>
+      <div class="stat"><span class="stat-icon"><i class="fa-solid fa-chart-line"></i></span><div><b>4</b><small>Core KPI categories</small></div></div>
+      <div class="stat"><span class="stat-icon"><i class="fa-solid fa-robot"></i></span><div><b>2</b><small>AI demonstration tools</small></div></div>
+      <div class="stat"><span class="stat-icon"><i class="fa-solid fa-code"></i></span><div><b>100%</b><small>Browser-based demo</small></div></div>
+    </section>
+
+    <section class="section-shell section-block" id="projects">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE ENGINEERING SUITE</div><h2>Ten tools. <span class="gradient-text">One platform.</span></h2><p>Explore practical modules designed around real engineering workflows and clearly stated assumptions.</p></div>
+        <div class="project-controls">
+          <label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="projectSearch" type="search" placeholder="Search modules..." aria-label="Search projects"></label>
+          <select id="categoryFilter" aria-label="Filter projects"><option value="all">All categories</option><option value="fundamentals">Engineering fundamentals</option><option value="operations">Operations & control</option><option value="ai">AI & digital systems</option></select>
+        </div>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card reveal" data-category="operations" data-search="industrial process monitoring dashboard pressure temperature flow analytics"><div class="card-top"><span class="project-icon blue"><i class="fa-solid fa-gauge-high"></i></span><span class="project-number">01 / MONITORING</span></div><h3>Industrial Process Monitoring</h3><p>Track key operating variables, review trends and identify readings outside configured operating bands.</p><div class="tag-row"><span>Process data</span><span>KPI analytics</span></div><button class="card-link" data-open="monitor"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="fundamentals" data-search="mass balance calculator material flow recovery"><div class="card-top"><span class="project-icon violet"><i class="fa-solid fa-scale-balanced"></i></span><span class="project-number">02 / MATERIAL</span></div><h3>Mass Balance Calculator</h3><p>Evaluate feed, product and waste streams with a steady-state material balance check.</p><div class="tag-row"><span>Mass balance</span><span>Recovery</span></div><button class="card-link" data-open="mass"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="fundamentals" data-search="heat exchanger performance analyser heat duty lmtd thermal"><div class="card-top"><span class="project-icon orange"><i class="fa-solid fa-temperature-half"></i></span><span class="project-number">03 / THERMAL</span></div><h3>Heat Exchanger Analyser</h3><p>Calculate heat duty, log-mean temperature difference and an estimated overall heat-transfer coefficient.</p><div class="tag-row"><span>Heat transfer</span><span>LMTD</span></div><button class="card-link" data-open="heat"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="operations" data-search="pump performance hydraulic power efficiency head flow"><div class="card-top"><span class="project-icon cyan"><i class="fa-solid fa-water"></i></span><span class="project-number">04 / ROTATING</span></div><h3>Pump Performance Monitor</h3><p>Estimate hydraulic power and shaft power from flow, head, fluid density and efficiency.</p><div class="tag-row"><span>Hydraulics</span><span>Equipment</span></div><button class="card-link" data-open="pump"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="operations" data-search="pid process control simulator proportional integral derivative"><div class="card-top"><span class="project-icon green"><i class="fa-solid fa-sliders"></i></span><span class="project-number">05 / CONTROL</span></div><h3>PID Control Simulator</h3><p>Explore a simplified closed-loop response and see how controller settings affect process behaviour.</p><div class="tag-row"><span>Automation</span><span>Control theory</span></div><button class="card-link" data-open="pid"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="operations" data-search="tank level management inventory high low alarms"><div class="card-top"><span class="project-icon pink"><i class="fa-solid fa-database"></i></span><span class="project-number">06 / STORAGE</span></div><h3>Tank Level Management</h3><p>Model a storage tank level profile and demonstrate configurable high- and low-level alarms.</p><div class="tag-row"><span>Inventory</span><span>Instrumentation</span></div><button class="card-link" data-open="tank"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="fundamentals" data-search="energy consumption optimisation cost kwh production"><div class="card-top"><span class="project-icon yellow"><i class="fa-solid fa-bolt"></i></span><span class="project-number">07 / ENERGY</span></div><h3>Energy Optimisation Tool</h3><p>Calculate energy consumption, specific energy use and estimated utility costs.</p><div class="tag-row"><span>Energy KPI</span><span>Cost analysis</span></div><button class="card-link" data-open="energy"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="ai" data-search="ai predictive maintenance machine learning failure risk"><div class="card-top"><span class="project-icon purple"><i class="fa-solid fa-brain"></i></span><span class="project-number">08 / AI MODEL</span></div><h3>AI Predictive Maintenance</h3><p>Demonstrate equipment risk scoring from vibration, temperature and pressure inputs.</p><div class="tag-row"><span>Machine learning concept</span><span>Risk scoring</span></div><button class="card-link" data-open="maintenance"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="ai" data-search="ai anomaly detection industrial process sensor data"><div class="card-top"><span class="project-icon red"><i class="fa-solid fa-triangle-exclamation"></i></span><span class="project-number">09 / AI MODEL</span></div><h3>Process Anomaly Detection</h3><p>Compare simulated sensor readings with reference bands and flag unusual process conditions.</p><div class="tag-row"><span>Anomaly detection</span><span>Sensor analytics</span></div><button class="card-link" data-open="anomaly"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+        <article class="project-card reveal" data-category="ai" data-search="oil gas process digital twin separator production train"><div class="card-top"><span class="project-icon teal"><i class="fa-solid fa-diagram-project"></i></span><span class="project-number">10 / DIGITAL TWIN</span></div><h3>Oil & Gas Process Digital Twin</h3><p>Explore a simplified production train with inlet flow, gas-liquid split and separator pressure.</p><div class="tag-row"><span>Oil & gas</span><span>Simulation</span></div><button class="card-link" data-open="twin"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
+      </div>
+      <div class="empty-state" id="emptyState" hidden><i class="fa-solid fa-magnifying-glass"></i><h3>No modules found</h3><p>Try another search term or category.</p></div>
+    </section>
+
+    <section class="workbench-section" id="workbench">
+      <div class="section-shell workbench-layout">
+        <div class="workbench-intro reveal"><div class="eyebrow"><span class="eyebrow-line"></span> INTERACTIVE WORKBENCH</div><h2>Put engineering<br><span class="gradient-text">into practice.</span></h2><p>Run selected calculations directly in your browser. Enter your values, calculate results and review the engineering notes.</p><div class="workbench-note"><i class="fa-solid fa-circle-info"></i><span>Demonstration environment using simplified equations. Verify all assumptions before applying results to real equipment.</span></div><div class="workbench-visual"><i class="fa-solid fa-gears"></i><span>INPUT <b>→</b> MODEL <b>→</b> OUTPUT</span></div></div>
+        <div class="calculator-panel reveal">
+          <div class="panel-header"><div><span class="panel-kicker">CALCULATION CONSOLE</span><h3 id="calcTitle">Mass balance</h3></div><span class="panel-status"><i class="fa-solid fa-circle"></i> READY</span></div>
+          <div class="calc-tabs" role="tablist"><button class="calc-tab active" data-calc="mass">Mass balance</button><button class="calc-tab" data-calc="pump">Pump</button><button class="calc-tab" data-calc="energy">Energy</button><button class="calc-tab" data-calc="heat">Heat exchanger</button></div>
+          <div class="calc-content" id="calcContent"></div>
+          <div class="result-panel" id="resultPanel"><div class="result-placeholder"><i class="fa-solid fa-chart-simple"></i><span>Your calculated results will appear here.</span></div></div>
+          <div class="panel-footer"><span><i class="fa-solid fa-lock"></i> Calculations run locally in your browser</span><button id="resetCalc" class="text-btn">Reset inputs <i class="fa-solid fa-rotate-right"></i></button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="insights">
+      <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> SIMULATED PLANT SNAPSHOT</div><h2>See the process <span class="gradient-text">at a glance.</span></h2><p>Illustrative operating data for a fictional process system.</p></div><span class="demo-label"><i class="fa-solid fa-circle"></i> SYNTHETIC DATA</span></div>
+      <div class="insight-grid">
+        <div class="insight-card large reveal"><div class="insight-head"><div><span class="panel-kicker">PROCESS TREND</span><h3>Operating profile</h3></div><span class="mini-select">Last 12 hours <i class="fa-solid fa-chevron-down"></i></span></div><div class="chart-legend"><span><i class="legend-dot dot-blue"></i> Pressure</span><span><i class="legend-dot dot-cyan"></i> Flow index</span></div><div class="chart-wrap"><canvas id="trendChart" aria-label="Illustrative process trend chart"></canvas></div><div class="chart-foot"><span><i class="fa-solid fa-circle-check"></i> No critical events in this sample</span><b>DEMO / 12H</b></div></div>
+        <div class="insight-card reveal"><div class="insight-head"><div><span class="panel-kicker">EQUIPMENT STATUS</span><h3>Asset overview</h3></div><i class="fa-solid fa-ellipsis"></i></div><div class="asset-list"><div class="asset"><span class="asset-symbol"><i class="fa-solid fa-fan"></i></span><div><b>Feed pump P-101</b><small>Rotating equipment</small></div><span class="status-normal">Normal</span></div><div class="asset"><span class="asset-symbol"><i class="fa-solid fa-temperature-half"></i></span><div><b>Heat exchanger E-201</b><small>Thermal equipment</small></div><span class="status-normal">Normal</span></div><div class="asset"><span class="asset-symbol"><i class="fa-solid fa-oil-well"></i></span><div><b>Separator V-301</b><small>Production vessel</small></div><span class="status-watch">Watch</span></div><div class="asset"><span class="asset-symbol"><i class="fa-solid fa-water"></i></span><div><b>Storage tank T-401</b><small>Storage system</small></div><span class="status-normal">Normal</span></div></div><div class="asset-foot"><span>4 monitored assets</span><span>Illustrative only</span></div></div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block about-section" id="about">
+      <div class="about-card reveal"><div class="about-symbol"><i class="fa-solid fa-atom"></i></div><div class="about-copy"><div class="eyebrow"><span class="eyebrow-line"></span> ABOUT THIS PORTFOLIO</div><h2>Engineering thinking.<br><span class="gradient-text">Software-driven execution.</span></h2><p>ProcessHub is a portfolio demonstration connecting core process engineering concepts with software development, analytics, automation and AI. Each module is intended for learning, experimentation and technical discussion.</p><div class="skill-chips"><span>Python</span><span>HTML / CSS / JavaScript</span><span>Process calculations</span><span>Data analytics</span><span>Machine learning</span><span>Industrial automation</span></div></div><div class="about-side"><div><b>10</b><small>PORTFOLIO PROJECTS</small></div><div><b>03</b><small>ENGINEERING TRACKS</small></div><div><b>01</b><small>INTEGRATED EXPERIENCE</small></div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="section-shell footer-inner"><a class="brand" href="#home"><span class="brand-mark"><i class="fa-solid fa-industry"></i></span><span><b>PROCESS<span class="brand-accent">HUB</span></b><small>ENGINEERING INTELLIGENCE</small></span></a><p>Built for learning, exploration and engineering portfolio development.</p><a href="#home" class="back-top">Back to top <i class="fa-solid fa-arrow-up"></i></a></div><div class="section-shell footer-bottom"><span>© 2026 ProcessHub Portfolio</span><span>Educational demonstration • Not for live plant control</span></div></footer>
+
+  <div class="modal-backdrop" id="moduleModal" aria-hidden="true">
+    <div class="module-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"><i class="fa-solid fa-circle-check"></i><span>Done</span></div>
+  <script src="script.js"></script>
+</body>
+</html>

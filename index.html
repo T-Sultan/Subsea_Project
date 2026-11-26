@@ -22,6 +22,7 @@
     <nav class="desktop-nav" aria-label="Main navigation">
       <a class="nav-link active" href="#home">Overview</a>
       <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#live-sim">Live simulation</a>
       <a class="nav-link" href="#workbench">Workbench</a>
       <a class="nav-link" href="#about">About</a>
     </nav>
@@ -95,6 +96,33 @@
         <article class="project-card reveal" data-category="ai" data-search="oil gas process digital twin separator production train"><div class="card-top"><span class="project-icon teal"><i class="fa-solid fa-diagram-project"></i></span><span class="project-number">10 / DIGITAL TWIN</span></div><h3>Oil & Gas Process Digital Twin</h3><p>Explore a simplified production train with inlet flow, gas-liquid split and separator pressure.</p><div class="tag-row"><span>Oil & gas</span><span>Simulation</span></div><button class="card-link" data-open="twin"><span>Open module</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button></article>
       </div>
       <div class="empty-state" id="emptyState" hidden><i class="fa-solid fa-magnifying-glass"></i><h3>No modules found</h3><p>Try another search term or category.</p></div>
+    </section>
+
+    <section class="section-shell section-block simulation-section" id="live-sim">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> LIVE SIMULATION MONITOR</div><h2>Ten modules. <span class="gradient-text">One live signal.</span></h2><p>Explore how the portfolio's ten browser-based demonstrations evolve over time in a single interactive view.</p></div>
+        <span class="demo-label"><i class="fa-solid fa-circle"></i> SYNTHETIC DATA</span>
+      </div>
+      <div class="simulation-panel reveal">
+        <div class="simulation-top">
+          <div class="simulation-title"><span class="simulation-icon"><i class="fa-solid fa-wave-square"></i></span><div><span class="panel-kicker">PORTFOLIO ACTIVITY</span><h3>Module response index</h3><p>Illustrative signal · normalized to a 0–100 scale</p></div></div>
+          <div class="simulation-controls">
+            <label class="simulation-select-label" for="simProject">Focus</label><select id="simProject" aria-label="Focus on a module"><option value="all">All 10 modules</option></select>
+            <label class="simulation-select-label" for="simWindow">Window</label><select id="simWindow" aria-label="Select graph time window"><option value="30">30 samples</option><option value="60" selected>60 samples</option><option value="90">90 samples</option></select>
+            <button id="simPause" class="simulation-pause" type="button" aria-pressed="false"><i class="fa-solid fa-pause"></i><span>Pause</span></button>
+          </div>
+        </div>
+        <div class="simulation-stats">
+          <div class="simulation-stat"><span>MODULES IN VIEW</span><b id="simModuleCount">10</b><small>engineering demonstrations</small></div>
+          <div class="simulation-stat"><span id="simAverageLabel">PORTFOLIO SIGNAL</span><b><span id="simAverage">—</span><em>/ 100</em></b><small>live synthetic average</small></div>
+          <div class="simulation-stat"><span>LEADING MODULE</span><b class="sim-leader" id="simLeader">—</b><small id="simLeaderScore">current signal leader</small></div>
+          <div class="simulation-stat"><span>SIMULATION CYCLES</span><b id="simCycles">0</b><small>generated in this session</small></div>
+        </div>
+        <div class="simulation-chart-heading"><div><b>Signal history</b><span id="simUpdated">Starting simulation…</span></div><div class="simulation-live"><span></span><span id="simRunState">UPDATING LIVE</span></div></div>
+        <div class="simulation-chart-wrap"><canvas id="moduleSimChart" role="img" aria-label="Live graph of normalized synthetic response signals for ten engineering project modules"></canvas><div class="simulation-tooltip" id="simTooltip" aria-hidden="true"><b id="simTooltipName"></b><span id="simTooltipValue"></span></div></div>
+        <div class="simulation-legend" id="simLegend" aria-label="Module graph legend"></div>
+        <div class="simulation-foot"><span><i class="fa-solid fa-circle-info"></i> All signals are generated locally for demonstration; they are not live plant data or engineering calculations.</span><span>DEMO / 1.2 SEC</span></div>
+      </div>
     </section>
 
     <section class="workbench-section" id="workbench">
